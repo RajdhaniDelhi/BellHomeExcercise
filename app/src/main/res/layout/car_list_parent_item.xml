@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/lighter_gray"
+        android:padding="@dimen/car_list_parent_padding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/carImage"
+            android:layout_width="@dimen/raw_image_width"
+            android:layout_height="@dimen/raw_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bmw"
+            android:contentDescription="@string/car_parent_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/raw_image_width"
+            app:layout_constraintStart_toEndOf="@id/carImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="@dimen/car_list_parent_padding"
+            android:paddingEnd="@dimen/car_list_parent_padding"
+            android:textColor="@color/text_color_light"
+            tools:text="@string/carMake"
+            android:textSize="@dimen/car_model_text_size"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/carImage"
+            app:layout_constraintTop_toBottomOf="@id/carModel"
+            android:layout_marginStart="@dimen/car_list_parent_padding"
+            android:textColor="@color/text_color_light"
+            tools:text="@string/price"
+            android:textSize="@dimen/car_price_text_size"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/carImage"
+            app:layout_constraintTop_toBottomOf="@id/carPrice"
+            android:layout_marginStart="@dimen/car_list_parent_padding"
+            android:theme="@style/RatingBar"
+            android:layout_marginTop="@dimen/label_margin_left"
+            style="?attr/ratingBarStyleSmall"
+            android:numStars="5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="@dimen/separator_height"
+        android:layout_marginStart="@dimen/separator_margin_start_end"
+        android:layout_marginEnd="@dimen/separator_margin_start_end"
+        android:layout_marginTop="@dimen/separator_margin_top_bottom"
+        android:layout_marginBottom="@dimen/separator_margin_top_bottom"
+        android:background="@color/separator_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

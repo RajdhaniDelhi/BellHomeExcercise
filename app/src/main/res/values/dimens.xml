@@ -1,0 +1,40 @@
+<resources>
+    <dimen name="home_image_height">200dp</dimen>
+    <dimen name="home_margin_start">16dp</dimen>
+    <dimen name="home_margin_end">16dp</dimen>
+    <dimen name="home_text_margin_bottom">24dp</dimen>
+    <dimen name="separator_height">4dp</dimen>
+
+    <dimen name="car_list_parent_padding">18dp</dimen>
+    <dimen name="separator_margin_start_end">16dp</dimen>
+    <dimen name="separator_margin_top_bottom">10dp</dimen>
+
+    <dimen name="view_stroke_width">1dp</dimen>
+    <dimen name="view_padding_start_end">1dp</dimen>
+    <dimen name="view_corner_radius">8dp</dimen>
+    <dimen name="home_card_corner">8dp</dimen>
+    <dimen name="home_card_margin_top">6dp</dimen>
+    <dimen name="home_card_margin_bottom">18dp</dimen>
+    <dimen name="recycler_top_margin">30dp</dimen>
+    <dimen name="raw_image_width">120dp</dimen>
+    <dimen name="raw_image_height">75dp</dimen>
+    <dimen name="pros_cons_padding">6dp</dimen>
+    
+    <dimen name="label_margin_left">8dp</dimen>
+    <dimen name="bullet_margin">2dp</dimen>
+
+    <dimen name="spinner_margin_top">14dp</dimen>
+    <dimen name="spinner_min_height">40dp</dimen>
+    <dimen name="spinner_item_padding">6dp</dimen>
+
+    <dimen name="home_title_text_size">32sp</dimen>
+    <dimen name="home_desc_text_size">22sp</dimen>
+
+    <dimen name="car_model_text_size">24sp</dimen>
+    <dimen name="car_price_text_size">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="bullet_text_size">22sp</dimen>
+
+</resources>

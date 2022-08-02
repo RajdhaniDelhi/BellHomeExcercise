@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Karun_HomeExcercise</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_fragment_label">GUIDOMIA</string>
+    <string name="home_title_head">Tacoma 2021</string>
+    <string name="home_title_desc">Get you\'s now</string>
+    <string name="filter">Filters</string>
+    <string name="header_image_content">HeadImage</string>
+
+    <string name="car_parent_content">CarParent</string>
+    <string name="carMake">Car Make</string>
+    <string name="price">Price :</string>
+
+    <string name="bullet_mark">●</string>
+    <string name="make_spinner_default">Any Make</string>
+    <string name="model_spinner_default">Any Model</string>
+</resources>
