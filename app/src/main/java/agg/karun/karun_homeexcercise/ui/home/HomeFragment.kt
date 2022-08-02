@@ -111,7 +111,7 @@ class HomeFragment : Fragment() {
         spinnerItemSelectedListener()
     }
 
-    private fun spinnerItemSelectedListener(){
+    private fun spinnerItemSelectedListener() {
         binding.make.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 adapterView: AdapterView<*>?,

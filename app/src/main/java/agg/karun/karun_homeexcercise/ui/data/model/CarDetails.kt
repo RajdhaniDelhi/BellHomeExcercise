@@ -15,7 +15,7 @@ data class CarDetails(
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "model")
-    var model: String ,
+    var model: String,
 
     @ColumnInfo(name = "make")
     var make: String? = null,

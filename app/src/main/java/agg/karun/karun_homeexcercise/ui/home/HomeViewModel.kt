@@ -29,14 +29,14 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
     /*@Method
     * @Returns LiveData object of CarList
     * */
-    fun getCarsList() : LiveData<MutableList<CarDetails>> {
+    fun getCarsList(): LiveData<MutableList<CarDetails>> {
         return carDetails
     }
 
     /*@Method
     * Read Car List from Database and places value into liveData
     * */
-    fun getCarsListFromDB(context: Context, carMake : String = "", carModel : String = "") {
+    fun getCarsListFromDB(context: Context, carMake: String = "", carModel: String = "") {
         viewModelScope.launch {
             val result: Deferred<MutableList<CarDetails>> =
                 CoroutineScope(Dispatchers.IO).async(Dispatchers.IO) {
@@ -45,10 +45,10 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
             result.await().also {
                 if (it.isEmpty() && carMake.isEmpty() && carModel.isEmpty()) {
                     carDetails.value = getCarListFromAssets(context)
-                } else{
+                } else {
                     carDetails.value = it
                 }
-                if (carMake.isEmpty() && carModel.isEmpty()){
+                if (carMake.isEmpty() && carModel.isEmpty()) {
                     getCarMakeListFromDB()
                     getCarModelListForMake()
                 }
@@ -67,11 +67,15 @@ class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
         val listAssets: Deferred<MutableList<CarDetails>> =
             CoroutineScope(Dispatchers.IO).async(Dispatchers.IO) {
 
-                val json = Utils.readFileFromAssets(context, CAR_CONST)    //read JSON data From asset file
+                val json =
+                    Utils.readFileFromAssets(context, CAR_CONST)    //read JSON data From asset file
 
                 val listType: Type = object :
                     TypeToken<ArrayList<CarModel>>() {}.type // create Type of response as per json data
-                val carModel = GsonBuilder().create().fromJson<ArrayList<CarModel>>(json, listType) // convert json data to typed model
+                val carModel = GsonBuilder().create().fromJson<ArrayList<CarModel>>(
+                    json,
+                    listType
+                ) // convert json data to typed model
 
                 val carsData = ArrayList<CarDetails>()
 

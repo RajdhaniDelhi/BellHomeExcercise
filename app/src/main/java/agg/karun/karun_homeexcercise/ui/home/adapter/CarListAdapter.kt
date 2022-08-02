@@ -8,7 +8,6 @@ import agg.karun.karun_homeexcercise.ui.data.model.CarProsConsModel
 import agg.karun.karun_homeexcercise.util.CHILD
 import agg.karun.karun_homeexcercise.util.CONS
 import agg.karun.karun_homeexcercise.util.PARENT
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -73,9 +72,9 @@ class CarListAdapter(private var list: MutableList<CarDetails>) :
                 childView.prosConsList.layoutManager = LinearLayoutManager(itemView.context)
                 childView.prosConsList.adapter =
                     ProsConsListAdapter(itemView.context, data.prosCons[0].value!!)
-                /*if (data.prosCons.first().type == CONS || (data.prosCons.first().type == CONS && data.prosCons.size == 1)) childView.separator.visibility =
+                if (data.prosCons.first().type == CONS || (data.prosCons.first().type == CONS && data.prosCons.size == 1)) childView.separator.visibility =
                     View.VISIBLE
-                else childView.separator.visibility = View.GONE*/
+                else childView.separator.visibility = View.GONE
             }
         }
     }

@@ -8,7 +8,7 @@ import com.google.gson.reflect.TypeToken
  * @Converter of list to string and string to list using GSON
  * Author By : Karun
  **/
-class ProsConsTypeConverter(){
+class ProsConsTypeConverter() {
     @TypeConverter
     fun fromString(value: String): ArrayList<CarProsConsModel> {
         val type = object : TypeToken<ArrayList<CarProsConsModel>>() {}.type

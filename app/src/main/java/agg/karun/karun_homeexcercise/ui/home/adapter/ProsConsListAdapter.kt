@@ -12,7 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
  * Create adapter for list item of Pros and Cons of Car
  * Author By : Karun
  **/
-class ProsConsListAdapter (private var context: Context, private var list: ArrayList<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ProsConsListAdapter(private var context: Context, private var list: ArrayList<String>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val rowView = ProsConsListItemBinding.inflate(LayoutInflater.from(context))
         return ProsConsViewHolder(rowView)

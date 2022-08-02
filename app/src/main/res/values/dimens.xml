@@ -22,6 +22,7 @@
     
     <dimen name="label_margin_left">8dp</dimen>
     <dimen name="bullet_margin">2dp</dimen>
+    <dimen name="width_zero">0dp</dimen>
 
     <dimen name="spinner_margin_top">14dp</dimen>
     <dimen name="spinner_min_height">40dp</dimen>

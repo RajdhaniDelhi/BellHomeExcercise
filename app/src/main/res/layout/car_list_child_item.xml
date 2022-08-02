@@ -22,7 +22,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/width_zero"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/label_margin_left"
             android:textColor="@color/text_color_light"
